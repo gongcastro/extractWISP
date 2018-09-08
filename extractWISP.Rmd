@@ -1,0 +1,13 @@
+---
+title: "extractWISP"
+author: "Gonzalo García-Castro"
+date: "1/9/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#extractWISP
+This function automatically stores a series of given dataset from postprocessed .txt files from WISP into a list and creates a summary dataset.
