@@ -11,7 +11,7 @@ import.wisp <-
     
     # locate files containing data
     files <- list.files(pattern = "txt")
-    if (length(files) == 0) stop("No files were found. Please check that the data files are in .txt format and that the right working directory has been set".)
+    if (length(files) == 0) stop("No files were found. Please check that the data files are in .txt format and that the right working directory has been set.")
     
     participants <- sub("\\.txt","", files) # name of each dataset
     n <- participants %>% length # sample size
