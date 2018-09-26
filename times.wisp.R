@@ -9,7 +9,7 @@ times.wisp <-
 
     library(magrittr) # data manipulation
     
-    n <- length(raw) # sample size
+    n <- raw %>% length # sample size
 
     times <- list()
     for (i in 1:n){

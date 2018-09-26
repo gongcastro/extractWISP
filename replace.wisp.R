@@ -38,7 +38,9 @@ replace.wisp <-
           times.extra[[i]]$block[to.replace[[i]][[j]]] <- times.delete[[i]]$block[to.replace[[i]][[j]]] # 2) change the block of each extra trial for the block of the trial it will replace
           times.replaced[[i]] <- rbind(times.filter[[i]], times.extra[[i]] %>% dplyr::filter(time >= min.time)) # 3) replace each unsuccessful trial by its correspondent extra trial
         }
-      } else {times.replaced[[i]] <- times.filter[[i]] # if no unsuccessful trials are present, keep data as it is
+      } else {times.replaced[[i]] <- times.filter[[i]]} # if no unsuccessful trials are present, keep data as it is
+      if (nrow(times.replaced[[i]]) <= min.trials){
+        times.replaced[[i]] <- paste("Completed less than", min.trials, " trials with looking time >", min.time, "ms", sep = " ")
       }
     }
     "times.replaced" %>% assign(., times.replaced, envir = .GlobalEnv)

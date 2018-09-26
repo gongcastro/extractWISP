@@ -1,0 +1,21 @@
+---
+title: "process.wisp"
+author: "Gonzalo García-Castro"
+date: "1/9/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+This function stores a series of given datasets from postprocessed files from WISP into lists and creates a summary dataset. This is accomplished using four functions.
+
+## import.wisp
+
+## times.wisp
+
+## replace.wisp
+
+## summarise.wisp
